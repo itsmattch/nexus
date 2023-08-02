@@ -1,7 +1,6 @@
 {
     "name": "itsmattch/nexus",
     "type": "project",
-    "description": "Nexus is an automation library that takes the dirty work off your plate.",
     "license": "MIT",
     "authors": [
         {
