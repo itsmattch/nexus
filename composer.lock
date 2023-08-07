@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "795583e0b4dd55ae96f3afe02daad4cc",
+    "content-hash": "0c9f7773c3753530bab50774b30b290d",
     "packages": [
         {
             "name": "brick/math",
@@ -1064,62 +1064,17 @@
             "time": "2023-08-05T18:08:03+00:00"
         },
         {
-            "name": "itsmattch/nexus-head",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/itsmattch/nexus-head.git",
-                "reference": "6732ffd78b05f6757a90bfbbd0f03d2475f60ba7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/itsmattch/nexus-head/zipball/6732ffd78b05f6757a90bfbbd0f03d2475f60ba7",
-                "reference": "6732ffd78b05f6757a90bfbbd0f03d2475f60ba7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^8.5",
-                "pestphp/pest": "^2.8"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Itsmattch\\NexusHead\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mateusz Chmielewski",
-                    "email": "hello@itsmattch.com",
-                    "homepage": "https://itsmattch.com/"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/itsmattch/nexus-head/issues",
-                "source": "https://github.com/itsmattch/nexus-head/tree/v0.0.1"
-            },
-            "time": "2023-08-05T18:13:22+00:00"
-        },
-        {
             "name": "itsmattch/nexus-headless",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsmattch/nexus-headless.git",
-                "reference": "5726d5ad66a37e26efe50edfb8b1dc2f3d46d9d9"
+                "reference": "b613be561c4a0e776f436e254485a35218e1c904"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsmattch/nexus-headless/zipball/5726d5ad66a37e26efe50edfb8b1dc2f3d46d9d9",
-                "reference": "5726d5ad66a37e26efe50edfb8b1dc2f3d46d9d9",
+                "url": "https://api.github.com/repos/itsmattch/nexus-headless/zipball/b613be561c4a0e776f436e254485a35218e1c904",
+                "reference": "b613be561c4a0e776f436e254485a35218e1c904",
                 "shasum": ""
             },
             "require": {
@@ -1162,7 +1117,7 @@
                 "issues": "https://github.com/itsmattch/nexus-headless/issues",
                 "source": "https://github.com/itsmattch/nexus-headless/tree/master"
             },
-            "time": "2023-08-06T14:51:15+00:00"
+            "time": "2023-08-07T18:47:03+00:00"
         },
         {
             "name": "laravel/framework",
@@ -6218,16 +6173,16 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v7.8.0",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "1813f0a3470f2ac171443bc37b324c2a693005f9"
+                "reference": "61553ad3260845d7e3e49121b7074619233d361b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/1813f0a3470f2ac171443bc37b324c2a693005f9",
-                "reference": "1813f0a3470f2ac171443bc37b324c2a693005f9",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/61553ad3260845d7e3e49121b7074619233d361b",
+                "reference": "61553ad3260845d7e3e49121b7074619233d361b",
                 "shasum": ""
             },
             "require": {
@@ -6307,7 +6262,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-08-04T10:26:10+00:00"
+            "time": "2023-08-07T08:03:21+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -8186,7 +8141,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "itsmattch/nexus-commons": 20,
-        "itsmattch/nexus-head": 20,
         "itsmattch/nexus-headless": 20
     },
     "prefer-stable": true,
