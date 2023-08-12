@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['color'])
+defineProps(['color']);
 </script>
 
 <template>

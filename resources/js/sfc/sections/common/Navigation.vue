@@ -1,61 +1,32 @@
 <script setup>
-import Resources from "../../components/icons/Resources.vue";
-import Entities from "../../components/icons/Entities.vue";
-import Repositories from "../../components/icons/Repositories.vue";
-import Processes from "../../components/icons/Processes.vue";
-import Assemblers from "../../components/icons/Assemblers.vue";
+import Analyze from "../../components/icons/Analyze.vue";
+import LayersLinked from "../../components/icons/LayersLinked.vue";
+import FileDescription from "../../components/icons/FileDescription.vue";
+import BoxModel from "../../components/icons/BoxModel.vue";
+import Compass from "../../components/icons/Compass.vue";
 
+const links = [
+    {route: 'resources', label: 'Resources', icon: FileDescription},
+    {route: 'entities', label: 'Entities', icon: BoxModel},
+    {route: 'assemblers', label: 'Assemblers', icon: LayersLinked},
+    {route: 'repositories', label: 'Repositories', icon: Compass},
+    {route: 'processes', label: 'Processes', icon: Analyze},
+];
 </script>
 
 <template>
-    <nav class="navigation">
-        <RouterLink to="resources" class="navigation__button">
-            <Resources color="white"/>
-            <span>Resources</span>
-        </RouterLink>
-        <RouterLink to="entities" class="navigation__button">
-            <Entities color="white"/>
-            <span>Entities</span>
-        </RouterLink>
-        <RouterLink to="repositories" class="navigation__button">
-            <Repositories color="white"/>
-            <span>Repositories</span>
-        </RouterLink>
-        <RouterLink to="assemblers" class="navigation__button">
-            <Assemblers color="white"/>
-            <span>Assemblers</span>
-        </RouterLink>
-        <RouterLink to="processes" class="navigation__button">
-            <Processes color="white"/>
-            <span>Processes</span>
+    <nav class="flex items-center justify-center p-2 gap-x-3 bg-black text-white">
+        <RouterLink v-for="link in links" :key="link.route" :to="link.route"
+                    class="flex items-center justify-center py-2 px-4 gap-x-3 rounded-lg border border-black">
+            <component :is="link.icon" color="white"/>
+            <span>{{ link.label }}</span>
         </RouterLink>
     </nav>
 </template>
 
 <style scoped>
-.navigation {
-    justify-content: center;
-    align-items: center;
-    background: black;
-    padding: 20px;
-    display: flex;
-    color: white;
-}
-
-.navigation__button {
-    transition: border-color 0.1s linear, background 0.1s linear;
-    border: 1.5px solid transparent;
-    background: transparent;
-    justify-content: center;
-    border-radius: 10px;
-    align-items: center;
-    padding: 10px 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.navigation__button.router-link-active {
-    border: 1.5px solid #444444;
+a.router-link-active {
+    border-color: #444444;
     background: #111111;
 }
 </style>
