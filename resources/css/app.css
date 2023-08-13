@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+    @apply rounded-lg bg-white shadow;
+}
+
+.card .row {
+    @apply px-8 py-5;
+}
+
+.card .row:nth-child(2n) {
+    @apply bg-slate-50;
+}
+
+.button, button {
+    @apply text-white rounded-lg px-4 py-2 block shadow;
+}
+
+.input, input {
+    @apply text-black rounded-lg px-4 py-2 block shadow w-full;
+}
+
+h1 {
+    @apply text-xl font-medium;
+}
+
+h2 {
+    @apply text-lg font-medium;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    @apply bg-slate-100;
+    font-family: "Figtree", sans-serif;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

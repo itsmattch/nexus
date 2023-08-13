@@ -4,28 +4,7 @@ import Navigation from "./sfc/sections/common/Navigation.vue";
 
 <template>
     <Navigation/>
-    <RouterView/>
+    <div class="m-auto max-w-3xl p-6 flex flex-col gap-6">
+        <RouterView/>
+    </div>
 </template>
-
-<style>
-html, body {
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    font-family: "Figtree", sans-serif;
-    background: #F8F9FA;
-    min-height: 100%;
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-</style>

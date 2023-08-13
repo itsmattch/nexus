@@ -3,7 +3,7 @@
 </script>
 
 <template>
-r2
+    r2
 </template>
 
 <style scoped>
