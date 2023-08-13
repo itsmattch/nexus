@@ -16,7 +16,7 @@ onMounted(async () => {
     </div>
     <div class="card">
         <div class="row">
-            <h1>Resources List</h1>
+            <h1>Entities List</h1>
         </div>
         <div v-for="entity in entities" class="row flex justify-between">
             <div class="column">{{ entity.name }}</div>
