@@ -1,27 +1,34 @@
 <script setup>
-import Analyze from "../../components/icons/Analyze.vue";
-import FileDescription from "../../components/icons/FileDescription.vue";
+import SearchBox from "../../components/common/nav/SearchBox.vue";
 import BoxModel from "../../components/icons/BoxModel.vue";
+import Link from "../../components/common/nav/Link.vue";
 
-const links = [
-    {route: '/resources', label: 'Resources', icon: FileDescription},
-    {route: '/entities', label: 'Entities', icon: BoxModel},
-    {route: '/processes', label: 'Processes', icon: Analyze},
+const sections = [
+    {
+        name: 'Management',
+        links: [
+            // {route: '/resources', label: 'Resources', icon: FileDescription},
+            {route: '/entities', label: 'Entities', icon: BoxModel},
+            // {route: '/processes', label: 'Processes', icon: Analyze},
+            // {route: '/health-checks', label: 'Health Checks', icon: Heartbeat},
+        ],
+    },
+    // {
+         // name: 'Miscellaneous',
+         // links: [
+             // {route: '/notifications', label: 'Notifications', icon: Bell},
+             // {route: '/settings', label: 'Settings', icon: Settings},
+         // ],
+    // },
 ];
 </script>
 
 <template>
-    <nav class="flex items-center justify-center p-3 gap-x-3 bg-white text-slate-900 shadow">
-        <RouterLink v-for="link in links" :key="link.route" :to="link.route"
-                    class="flex items-center justify-center py-2 px-4 gap-x-3 rounded-lg">
-            <component :is="link.icon" color="#170206"/>
-            <span>{{ link.label }}</span>
-        </RouterLink>
+    <nav class="w-full max-w-xs gap-10 flex flex-col">
+        <SearchBox/>
+        <div v-for="section in sections" :key="section.name" class="flex flex-col gap-3">
+            <div class="font-bold">{{ section.name }}</div>
+            <Link v-for="link in section.links" :key="link.route" v-bind="link"/>
+        </div>
     </nav>
 </template>
-
-<style scoped>
-a.router-link-active {
-    @apply bg-slate-100;
-}
-</style>

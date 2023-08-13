@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
-<body>
-<div id="app"></div>
+<body class="flex">
+<div id="app" class="min-h-full w-full"></div>
 </body>
 </html>

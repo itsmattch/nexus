@@ -40,7 +40,6 @@ html {
 }
 
 body {
-    @apply bg-slate-100;
     font-family: "Figtree", sans-serif;
     font-weight: 500;
     min-height: 100%;
