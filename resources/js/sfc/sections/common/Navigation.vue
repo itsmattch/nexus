@@ -1,15 +1,11 @@
 <script setup>
 import Analyze from "../../components/icons/Analyze.vue";
-import LayersLinked from "../../components/icons/LayersLinked.vue";
 import FileDescription from "../../components/icons/FileDescription.vue";
 import BoxModel from "../../components/icons/BoxModel.vue";
-import Compass from "../../components/icons/Compass.vue";
 
 const links = [
     {route: '/resources', label: 'Resources', icon: FileDescription},
     {route: '/entities', label: 'Entities', icon: BoxModel},
-    {route: '/assemblers', label: 'Assemblers', icon: LayersLinked},
-    {route: '/repositories', label: 'Repositories', icon: Compass},
     {route: '/processes', label: 'Processes', icon: Analyze},
 ];
 </script>

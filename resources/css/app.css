@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .card {
-    @apply rounded-lg bg-white shadow;
+    @apply rounded-lg bg-white shadow flex flex-col;
 }
 
-.card .row {
-    @apply px-8 py-5;
+.row {
+    @apply px-8 py-5 gap-8;
 }
 
-.card .row:nth-child(2n) {
+.row:nth-child(2n) {
     @apply bg-slate-50;
 }
 
@@ -42,6 +42,7 @@ html {
 body {
     @apply bg-slate-100;
     font-family: "Figtree", sans-serif;
+    font-weight: 500;
     min-height: 100%;
 }
 
