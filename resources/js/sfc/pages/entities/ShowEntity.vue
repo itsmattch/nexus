@@ -3,13 +3,16 @@ import axios from 'axios';
 import {onMounted, ref} from 'vue';
 import {useRoute} from "vue-router";
 import DeleteEntity from "../../sections/entity/DeleteEntity.vue";
-import EntityStatus from "../../sections/entity/EntityStatus.vue";
-import EntityStatistics from "../../sections/entity/EntityStatistics.vue";
 import EntityBadges from "../../sections/entity/EntityBadges.vue";
-import EntityInstances from "../../sections/entity/EntityInstances.vue";
 
 const id = useRoute().params.id;
 const entity = ref({});
+const createBadge = (badge) => {
+    entity.value.badges.push(badge);
+};
+const deleteBadge = (id) => {
+    entity.value.badges = entity.value.badges.filter(badge => badge.id !== id);
+};
 
 onMounted(async () => {
     const response = await axios.get('/api/entities/' + id);
@@ -19,9 +22,6 @@ onMounted(async () => {
 
 <template>
     <h1 class="capitalize">{{ entity.name }}</h1>
-    <EntityStatus :entity="entity"/>
-    <EntityStatistics :entity="entity"/>
-    <EntityBadges :entity="entity"/>
-    <EntityInstances :entity="entity"/>
+    <EntityBadges :entity="entity" @createBadge="createBadge" @deleteBadge="deleteBadge"/>
     <DeleteEntity :entity="entity"/>
 </template>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .button, button {
-    @apply rounded px-4 py-2 block;
+    @apply rounded px-4 py-2 block text-sm;
 }
 
 .input, input {
