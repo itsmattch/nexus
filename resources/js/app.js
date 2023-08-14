@@ -5,6 +5,7 @@ import App from "./App.vue";
 import axios from 'axios';
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
+import {initializeEntitiesListeners} from "./listeners/entities.js";
 
 window.axios = axios;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -20,8 +21,8 @@ window.Echo = new Echo({
 });
 
 const app = createApp(App);
-
 app.use(createPinia())
 app.use(router)
 app.mount('#app');
 
+initializeEntitiesListeners();

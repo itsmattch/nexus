@@ -1,20 +1,12 @@
 <script setup>
-import axios from "axios";
 import {ref} from "vue";
+import EntityAPI from "../../../classes/api/EntityAPI.js";
 
-const emit = defineEmits(['newEntity']);
 const newEntityName = ref('');
 const formError = ref('');
 
 const createEntity = async () => {
-    try {
-        const response = await axios.post('/api/entities/', {name: newEntityName.value});
-        emit('newEntity', response.data);
-        newEntityName.value = '';
-    } catch (error) {
-        console.log(error);
-        formError.value = error.response?.data?.message || 'Error creating entity';
-    }
+    await EntityAPI.createEntity(newEntityName.value);
 };
 </script>
 
