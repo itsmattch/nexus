@@ -11,7 +11,7 @@ defineProps(['entities']);
                  class="row flex justify-between items-center border-b py-6">
         <div class="">
             <div class="flex gap-2 items-center">
-                <Pulse color="red"/>
+                <Pulse color="green"/>
                 <div class="capitalize font-medium">{{ entity.name }}</div>
             </div>
             <div class="text-slate-400">
@@ -19,7 +19,7 @@ defineProps(['entities']);
             </div>
         </div>
         <div class="flex gap-2 items-center justify-center text-slate-600">
-            <Badge color="red" text="preview"/>
+            <Badge color="green" text="Preview"/>
             <ChevronRight/>
         </div>
         <!--        <div class="column">{{ entity.name }}</div>-->

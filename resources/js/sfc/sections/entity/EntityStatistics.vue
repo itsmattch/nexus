@@ -3,5 +3,9 @@ defineProps(['entity']);
 </script>
 
 <template>
-    <div>Statistics</div>
+    <h2>Statistics</h2>
+    <div>
+        <div>Discovery statistics</div>
+        <div>Errors encountered</div>
+    </div>
 </template>

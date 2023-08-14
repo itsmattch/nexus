@@ -1,14 +1,14 @@
 <script setup>
 import SearchBox from "../../components/common/nav/SearchBox.vue";
-import BoxModel from "../../components/icons/BoxModel.vue";
 import Link from "../../components/common/nav/Link.vue";
+import CubeSphere from "../../components/icons/CubeSphere.vue";
 
 const sections = [
     {
         name: 'Management',
         links: [
             // {route: '/resources', label: 'Resources', icon: FileDescription},
-            {route: '/entities', label: 'Entities', icon: BoxModel},
+            {route: '/entities', label: 'Entities', icon: CubeSphere},
             // {route: '/processes', label: 'Processes', icon: Analyze},
             // {route: '/health-checks', label: 'Health Checks', icon: Heartbeat},
         ],
