@@ -7,7 +7,6 @@ export function initializeEntitiesListeners() {
     Echo.channel('nexus').listen('.EntityCreated', (event) => {
         entitiesStore.addEntity(new Entity(event.entity.id, event.entity.name));
     }).listen('.EntityDeleted', (event) => {
-        console.log(event.entityId);
         entitiesStore.removeEntity(event.entityId);
     });
 }
