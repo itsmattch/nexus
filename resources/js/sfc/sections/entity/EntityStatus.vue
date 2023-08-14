@@ -1,6 +1,7 @@
 <script setup>
-
 import Badge from "../../components/common/Badge.vue";
+
+defineProps(['entity']);
 </script>
 
 <template>

@@ -14,11 +14,11 @@ const sections = [
         ],
     },
     // {
-         // name: 'Miscellaneous',
-         // links: [
-             // {route: '/notifications', label: 'Notifications', icon: Bell},
-             // {route: '/settings', label: 'Settings', icon: Settings},
-         // ],
+    // name: 'Miscellaneous',
+    // links: [
+    // {route: '/notifications', label: 'Notifications', icon: Bell},
+    // {route: '/settings', label: 'Settings', icon: Settings},
+    // ],
     // },
 ];
 </script>

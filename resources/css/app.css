@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 .button, button {
-    @apply rounded-md px-4 py-1 block;
+    @apply rounded px-4 py-2 block;
 }
 
 .input, input {
-    @apply text-black rounded-lg px-4 py-2 block border w-full;
+    @apply text-black rounded px-4 py-2 block w-full border-2;
+}
+
+.shadow-stripe {
+    box-shadow: 0 30px 60px -30px rgba(118, 124, 131, 0.15), 0 60px 80px -20px rgba(201, 201, 223, 0.10);
 }
 
 h1 {
-    @apply text-xl font-semibold;
+    @apply text-lg font-semibold;
 }
 
 h2 {
-    @apply text-lg font-semibold;
+    @apply text-base font-semibold;
 }
 
 html, body {
