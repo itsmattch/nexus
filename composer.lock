@@ -1370,12 +1370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsmattch/nexus-headless.git",
-                "reference": "74f748a387b42bd298c22a0905a4002e65351463"
+                "reference": "b19bb7776ffff377aec12adc0066955ce7a73ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsmattch/nexus-headless/zipball/74f748a387b42bd298c22a0905a4002e65351463",
-                "reference": "74f748a387b42bd298c22a0905a4002e65351463",
+                "url": "https://api.github.com/repos/itsmattch/nexus-headless/zipball/b19bb7776ffff377aec12adc0066955ce7a73ac6",
+                "reference": "b19bb7776ffff377aec12adc0066955ce7a73ac6",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1418,7 @@
                 "issues": "https://github.com/itsmattch/nexus-headless/issues",
                 "source": "https://github.com/itsmattch/nexus-headless/tree/master"
             },
-            "time": "2023-08-14T20:30:35+00:00"
+            "time": "2023-08-14T20:38:39+00:00"
         },
         {
             "name": "laravel/framework",

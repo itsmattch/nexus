@@ -20,7 +20,7 @@ export default class EntityAPI {
 
     static async removeEntity(id) {
         try {
-            const response = await axios.delete('/api/entities');
+            const response = await axios.delete('/api/entities/' + id);
             return response.data;
         } catch (error) {
             //

@@ -1,17 +1,14 @@
 <script setup>
-import axios from "axios";
+import EntityAPI from "../../../classes/api/EntityAPI.js";
 import {useRouter} from "vue-router";
 
-const props = defineProps(['entity']);
 const router = useRouter();
+const props = defineProps(['entity']);
+
 const deleteEntity = async () => {
-    try {
-        await axios.delete('/api/entities/' + props.entity.id).then(() => {
-            router.push('/entities');
-        });
-    } catch (error) {
-        console.log(error);
-    }
+    await EntityAPI.removeEntity(props.entity.id).then(() => {
+        router.push('/entities');
+    });
 };
 </script>
 
