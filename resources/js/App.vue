@@ -8,7 +8,7 @@ import Navigation from "./sfc/sections/common/Navigation.vue";
             <Navigation/>
         </div>
         <div class="flex-3">
-            <div class="w-full max-w-3xl p-10">
+            <div class="w-full max-w-3xl p-10 flex flex-col gap-y-6">
                 <router-view/>
             </div>
         </div>

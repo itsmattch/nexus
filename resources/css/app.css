@@ -2,32 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.card {
-    @apply rounded-lg bg-white shadow flex flex-col;
-}
-
-.row {
-    @apply px-8 py-5 gap-8;
-}
-
-.row:nth-child(2n) {
-    @apply bg-slate-50;
-}
-
 .button, button {
-    @apply text-white rounded-lg px-4 py-2 block shadow;
+    @apply rounded-md px-4 py-1 block;
 }
 
 .input, input {
-    @apply text-black rounded-lg px-4 py-2 block shadow w-full;
+    @apply text-black rounded-lg px-4 py-2 block border w-full;
 }
 
 h1 {
-    @apply text-xl font-medium;
+    @apply text-xl font-semibold;
 }
 
 h2 {
-    @apply text-lg font-medium;
+    @apply text-lg font-semibold;
 }
 
 html, body {
@@ -41,11 +29,16 @@ html {
 
 body {
     font-family: "Figtree", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
     min-height: 100%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+section {
+    @apply flex flex-col gap-y-2 items-start;
 }
