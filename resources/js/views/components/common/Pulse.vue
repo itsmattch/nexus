@@ -1,9 +1,13 @@
 <script setup>
+import {computed} from "vue";
+
 const props = defineProps(['color']);
-const colors = {
-    background: 'bg-' + props.color + '-200',
-    dot: 'bg-' + props.color + '-400',
-};
+const colors = computed(() => {
+    return {
+        background: 'bg-' + props.color + '-200',
+        dot: 'bg-' + props.color + '-400',
+    }
+});
 </script>
 
 <template>

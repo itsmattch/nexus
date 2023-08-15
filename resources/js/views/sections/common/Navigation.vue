@@ -7,19 +7,9 @@ const sections = [
     {
         name: 'Management',
         links: [
-            // {route: '/resources', label: 'Resources', icon: FileDescription},
             {route: '/entities', label: 'Entities', icon: CubeSphere},
-            // {route: '/processes', label: 'Processes', icon: Analyze},
-            // {route: '/health-checks', label: 'Health Checks', icon: Heartbeat},
         ],
     },
-    // {
-    // name: 'Miscellaneous',
-    // links: [
-    // {route: '/notifications', label: 'Notifications', icon: Bell},
-    // {route: '/settings', label: 'Settings', icon: Settings},
-    // ],
-    // },
 ];
 </script>
 

@@ -5,8 +5,12 @@ import EntityAPI from "../../../classes/api/EntityAPI.js";
 const newEntityName = ref('');
 const formError = ref('');
 
-const createEntity = async () => {
-    await EntityAPI.createEntity(newEntityName.value);
+const createEntity = () => {
+    EntityAPI.createEntity(newEntityName.value).then(() => {
+        formError.value = '';
+    }).catch((error) => {
+        formError.value = error?.response?.data?.message || 'Cannot create a new entity.';
+    });
 };
 </script>
 

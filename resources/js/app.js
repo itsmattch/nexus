@@ -26,6 +26,6 @@ app.use(createPinia())
 app.use(router)
 app.mount('#app');
 
-await useEntitiesStore().boot();
+await useEntitiesStore().bootEntities();
 
 initializeEntitiesListeners();

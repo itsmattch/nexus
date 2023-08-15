@@ -8,5 +8,9 @@ export function initializeEntitiesListeners() {
         entitiesStore.addEntity(new Entity(event.entity.id, event.entity.name));
     }).listen('.EntityDeleted', (event) => {
         entitiesStore.removeEntity(event.entityId);
+    }).listen('.BadgeCreated', (event) => {
+        // todo
+    }).listen('.BadgeDeleted', (event) => {
+        // todo
     });
 }

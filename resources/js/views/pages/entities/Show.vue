@@ -2,7 +2,7 @@
 import {useRoute} from "vue-router";
 import DeleteEntity from "../../sections/entity/DeleteEntity.vue";
 import EntityBadges from "../../sections/entity/EntityBadges.vue";
-import {computed} from "vue";
+import {computed, watchEffect} from "vue";
 import {useEntitiesStore} from "../../../stores/entities.js";
 
 const route = useRoute();
@@ -11,6 +11,13 @@ const entity = computed(() => {
     return entitiesStorage.entities[route.params.id] || {};
 })
 
+watchEffect(async () => {
+    const currentEntity = entity.value;
+
+    if (currentEntity.id) {
+        await entitiesStorage.bootEntity(currentEntity.id);
+    }
+});
 </script>
 
 <template>

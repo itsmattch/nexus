@@ -1,36 +1,18 @@
 <script setup>
 import {ref} from "vue";
+import BadgeAPI from "../../../classes/api/BadgeAPI.js";
 
-const emit = defineEmits(['createBadge', 'deleteBadge']);
 const props = defineProps(['entity']);
-
 const name = ref('');
 const keys = ref('');
 const formError = ref('');
 
-const createBadge = async () => {
-    const keysArray = keys.value.split(',').map(key => key.trim());
-    try {
-        const response = await axios.post('/api/badges/', {
-            entity_id: props.entity.id,
-            keys: keysArray,
-            name: name.value
-        });
-        emit('createBadge', response.data);
-    } catch (error) {
-        console.log(error);
-        formError.value = error.response?.data?.message || 'Error creating entity';
-    }
-};
+const createBadge = async() => {
+    await BadgeAPI.createBadge(props.entity.id, name.value, keys.value.split(',').map(key => key.trim()));
+}
 
 const deleteBadge = async (id) => {
-    try {
-        await axios.delete('/api/badges/' + id);
-        emit('deleteBadge', id);
-    } catch (error) {
-        console.log(error);
-        formError.value = error.response?.data?.message || 'Error creating entity';
-    }
+    await BadgeAPI.removeBadge(id);
 };
 </script>
 
@@ -45,7 +27,7 @@ const deleteBadge = async (id) => {
             <div v-for="badge in entity.badges" class="flex justify-between items-center gap-4 w-full border-b-2 border-slate-100 last:border-b-0 py-4">
                 <div>
                     <div class="font-semibold capitalize">{{ badge.name }}</div>
-                    <div class="text-sm">Requires keys: {{ badge.keys.map(item => item.name).join(', ') }}</div>
+                    <div class="text-sm">Requires keys: {{ badge.keysArray.join(', ') }}</div>
                 </div>
                 <button class="text-red-500 font-bold" @click="deleteBadge(badge.id)">Delete</button>
             </div>
